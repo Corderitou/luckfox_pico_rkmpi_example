@@ -57,7 +57,7 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
 set(SRC_DIR "${EXAMPLE_DIR}/src")
-file(GLOB SRC_FILES "${SRC_DIR}/*.cc")
+file(GLOB SRC_FILES "${SRC_DIR}/*.cc" "${SRC_DIR}/*.cpp")
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 
 add_compile_options(-g -Wall

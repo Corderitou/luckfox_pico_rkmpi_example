@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ROOT_PWD=$(cd "$(dirname $0)" && cd -P "$(dirname "$SOURCE")" && pwd)
+export LUCKFOX_SDK_PATH=/home/cordero/luckfoxRV1306/luckfox-pico
 
 if [ "$1" = "clean" ]; then
 	if [ -d "${ROOT_PWD}/build" ]; then
@@ -38,7 +39,8 @@ options=("luckfox_pico_rtsp_opencv"
 	"luckfox_pico_rtsp_opencv_capture"
 	"luckfox_pico_rtsp_retinaface"
 	"luckfox_pico_rtsp_retinaface_osd"
-	"luckfox_pico_rtsp_yolov5")
+	"luckfox_pico_rtsp_yolov5"
+	"handlandmarks_rtsp")
 
 PS3="Enter your choice [1-${#options[@]}]: "
 
